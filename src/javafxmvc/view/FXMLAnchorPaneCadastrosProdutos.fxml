@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="405.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxmvc.controller.FXMLAnchorPaneCadastrosProdutosController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="414.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tableViewProdutos" prefHeight="203.2" prefWidth="649.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="tableColumnProdutosCodigo" prefWidth="70.39999395608902" text="Código" />
+                        <TableColumn fx:id="tableColumnProdutosNome" prefWidth="340.79998779296875" text="Nome" />
+                        <TableColumn fx:id="tableColumnProdutosPreco" prefWidth="74.4000244140625" text="Preço" />
+                        <TableColumn fx:id="tableColumnProdutosQuantidade" prefWidth="64.79998779296875" text="Qtdade" />
+                        <TableColumn fx:id="tableColumnProdutosCategoria" prefWidth="103.199951171875" text="Categoria" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane layoutX="186.0" layoutY="20.0" prefHeight="129.0" prefWidth="410.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="0.0" prefWidth="15.20001220703125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="313.59998779296876" minWidth="10.0" prefWidth="313.59998779296876" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Código" />
+                        <Label text="Nome" GridPane.rowIndex="1" />
+                        <Label fx:id="labelProdutoCodigo" text="Label" GridPane.columnIndex="1" />
+                        <Label text="Preço" GridPane.rowIndex="2" />
+                        <Label fx:id="labelProdutoNome" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelProdutoPreco" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Quantidade" GridPane.rowIndex="3" />
+                        <Label fx:id="labelProdutoQuantidade" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Categoria" GridPane.rowIndex="4" />
+                        <Label fx:id="labelProdutoCategoria" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="8.0" layoutY="5.0" text="Detalhes do Produto">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonInserir" layoutX="375.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="26.0" prefWidth="82.0" text="Inserir" />
+                  <Button fx:id="buttonAlterar" layoutX="463.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="26.0" prefWidth="82.0" text="Alterar" />
+                  <Button fx:id="buttonRemover" layoutX="553.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonRemover" prefHeight="26.0" prefWidth="82.0" text="Remover" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
